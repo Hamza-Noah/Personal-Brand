@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "Space Mono";
-  src: url("SpaceMono-Italic.woff2") format("woff2"),
-    url("SpaceMono-Italic.woff") format("woff");
+  src: url("./assets/fonts/SpaceMono-Italic.woff2") format("woff2"),
+    url("./assets/fonts/SpaceMono-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Space Mono";
-  src: url("SpaceMono-Regular.woff2") format("woff2"),
-    url("SpaceMono-Regular.woff") format("woff");
+  src: url("./assets/fonts/SpaceMono-Regular.woff2") format("woff2"),
+    url("./assets/fonts/SpaceMono-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: "Space Mono";
-  src: url("SpaceMono-Bold.woff2") format("woff2"),
-    url("SpaceMono-Bold.woff") format("woff");
+  src: url("./assets/fonts/SpaceMono-Bold.woff2") format("woff2"),
+    url("./assets/fonts/SpaceMono-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -36,13 +36,13 @@
 
 @font-face {
   font-family: "ArabicPoetryExtendedMedium";
-  src: url("ArabicPoetryExtended-Medium.woff2") format("woff2"),
-    url("ArabicPoetryExtended-Medium.woff") format("woff");
+  src: url("./assets/fonts/ArabicPoetryExtended-Medium.woff2") format("woff2"),
+    url("./assets/fonts/ArabicPoetryExtended-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: "Space Mono";
+  font-family: "ArabicPoetryExtendedMedium";
 }
