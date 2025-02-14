@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTranslationContext } from "./contexts/TranslationContext";
 import i18n from "./i18n";
+import Test from "./components/Test";
 
 function App() {
   const { t, changeLanguage, currentLang } = useTranslationContext();
@@ -15,6 +16,7 @@ function App() {
       <button onClick={() => changeLanguage("ar")}>ar</button>
       <button onClick={() => changeLanguage("en")}>en</button>
       <p>Current Language: {currentLang}</p>
+      <Test></Test>
     </>
   );
 }

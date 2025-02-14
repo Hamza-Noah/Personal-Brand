@@ -12,6 +12,7 @@ i18n
   .use(HttpApi)
   .init({
     fallbackLng: "en",
+    keySeparator: ".",
     detection: {
       order: ["cookie", "localStorage", "navigator"],
       caches: ["localStorage", "cookie"],
