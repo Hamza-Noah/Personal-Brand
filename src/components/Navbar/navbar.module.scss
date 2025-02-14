@@ -20,3 +20,12 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.dropdown-menu {
+  background-color: #140f13 !important;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+}
+.dropdown-toggle::after {
+  content: none !important;
+}
