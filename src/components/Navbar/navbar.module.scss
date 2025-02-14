@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .navbar {
   background-color: #140f13;
   padding: 20px 0;
@@ -10,7 +12,7 @@
 }
 
 .language-btn-active {
-  color: #ffff2b;
+  color: $tertiary;
 }
 
 .logo {
