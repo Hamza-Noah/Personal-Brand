@@ -1,6 +1,14 @@
 {
   "Welcome to React": "Welcome to React and react-i18next",
-  "home": {
-    "welcome": "مرحبًا بك في React"
+  "landing": {
+    "chapter": "(Chapter 01)",
+    "wake": "A Wake-up Taste",
+    "year": "2024",
+    "birthyear": "1998",
+    "birthdate": "1998",
+    "first_work_date": "[2006]",
+    "age": "26",
+    "first_work": "I drew my first art work, I was simply taking inspirations from everything around me; family, friends, video games, my neighborhood and surely my school and my city, Damascus Syria,",
+    "old_young": "Yup, I am that old (young)"
   }
 }
