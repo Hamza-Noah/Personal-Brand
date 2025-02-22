@@ -10,7 +10,7 @@ const Landing = () => {
     <>
       <div className={`${styles.landing} py-3`}>
         <div className="row m-0">
-          <div className={`col-xs-12 col-lg-5 ${styles.bonner} p-0`}>
+          <div className={`col-xs-12 col-lg-5 ${styles.banner} p-0`}>
             <img width="100%" src={banner} alt="" />
             <br />
             <div
@@ -76,7 +76,11 @@ const Landing = () => {
                       className={`${styles["yellow-box"]} position-relative text-dark text-left`}
                     >
                       <p>{t("landing.old_young")}</p>
-                      <img className={styles["banner-atom"]} src={bannerAtom} alt="" />
+                      <img
+                        className={styles["banner-atom"]}
+                        src={bannerAtom}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
