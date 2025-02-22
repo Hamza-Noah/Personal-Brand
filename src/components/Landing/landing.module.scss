@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+.landing {
+  background-color: $primary-color;
+  direction: ltr;
+  color: $white-text;
+}
+
+.details {
+  letter-spacing: 2;
+}
+
+.year {
+  font-family: adoody;
+  font-size: 1.25rem;
+}
+
+.branding .year {
+  padding-top: 14px;
+}
+
+.first-work {
+  padding: 0 30px;
+  // font-size: 0.8rem;
+}
+
+.age {
+  font-size: 9rem;
+  line-height: 1;
+  font-weight: bolder;
+  transform: translateY(-25px);
+}
+
+.yellow-box {
+  background-color: $tertiary;
+  height: 100px;
+  flex-grow: 1;
+}
+
+.first-work-date {
+}
+
+.bg-pink {
+  background-color: $secondary-color;
+}
+
+.birthyear {
+  font-size: 1rem;
+  transform: translateY(-25px);
+}
+
+.yellow-box {
+  background-color: $tertiary;
+
+  p {
+    white-space: nowrap;
+    transform: rotate(90deg) translate(95px, -70px);
+  }
+
+  .banner-atom {
+    position: absolute;
+  }
+}
