@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className={`${styles.navbar}`}>
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center">
-          <div className="language-buttons d-none d-lg-block">
+          <div className="language-buttons d-none d-lg-block fw-bolder">
             <button
               className={`${styles["language-btn"]} ${
                 currentLang === "ar" ? styles["language-btn-active"] : ""
