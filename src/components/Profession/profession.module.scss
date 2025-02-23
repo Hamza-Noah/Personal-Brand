@@ -15,10 +15,20 @@
     font-size: 1.2rem;
   }
 
-  .job p {
-    font-size: 8rem;
-    @media (max-width: 991px) {
-      font-size: 5rem;
+  .job {
+    @media (min-width: 992px) {
+      &:first-child {
+        margin-right: 40px;
+      }
+      &:last-child {
+        margin-left: 40px;
+      }
+    }
+    p {
+      font-size: 8rem;
+      @media (max-width: 991px) {
+        font-size: 5rem;
+      }
     }
   }
 }

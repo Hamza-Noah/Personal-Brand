@@ -3,6 +3,7 @@ import playButton from "../../assets/image/paly button.png";
 import styles from "./profession.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
 import { useState, useEffect } from "react";
+import Typewriter from "../Typewriter/TypeWriter";
 
 const Profession = () => {
   const { t, currentLang } = useTranslationContext();
@@ -39,7 +40,7 @@ const Profession = () => {
         </p>
         <div
           className="d-flex flex-wrap
-         align-items-center justify-content-between"
+         align-items-center"
         >
           <div className={styles.job}>
             <p>{t("profession.visual")}</p>
@@ -48,7 +49,10 @@ const Profession = () => {
             <SpinningStar />
           </div>
           <div className={styles.job}>
-            <p>{t("profession.artist")}</p>
+            <p>
+              {" "}
+              <Typewriter text={t("profession.artist")} />
+            </p>
           </div>
         </div>
       </div>
