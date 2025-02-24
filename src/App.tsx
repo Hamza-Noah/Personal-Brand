@@ -29,7 +29,7 @@ function App() {
       <Navbar />
       <Landing />
       <Profession />
-      {/* <Work /> */}
+      <Work />
     </>
   );
 }

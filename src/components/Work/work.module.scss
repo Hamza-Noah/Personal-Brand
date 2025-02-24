@@ -2,4 +2,53 @@
 
 .carousel {
   background-color: $tertiary;
+  padding: 2px 0;
+  @media (min-width: 992px) {
+    padding: 2px 16px;
+  }
+}
+
+.smile {
+  z-index: 2;
+  top: -100px;
+  right: 100px;
+  @media (max-width: 991px) {
+    right: -35px;
+  }
+}
+@media (min-width: 992px) {
+  :global(.carousel-control-next) {
+    transform: translateX(-50px);
+
+    width: fit-content;
+  }
+  :global(.carousel-control-prev) {
+    transform: translateX(50px);
+    width: fit-content;
+  }
+}
+
+:global(.carousel-item) {
+  transition: none !important;
+}
+
+:global(.carousel-control-next),
+:global(.carousel-control-prev) {
+  opacity: 1;
+
+  &:hover img {
+    background-color: $tertiary;
+    padding: 20px 10px;
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      display: block;
+    }
+  }
+
+  img:last-child {
+    display: none;
+  }
 }
