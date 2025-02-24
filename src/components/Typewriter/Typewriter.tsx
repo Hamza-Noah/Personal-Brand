@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import typewriter from "../../assets/image/typewriter.svg";
 
 const Typewriter = ({ text = "test", delay = 500 }) => {
