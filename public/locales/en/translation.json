@@ -17,6 +17,22 @@
     "artist": "Artist"
   },
   "work": {
-    "work": "work"
+    "work": "work",
+    "editing": "(Editing & Mothing Graphics)",
+    "modeling": "(Modeling & Art Direction)",
+    "brand": "(BRAND EXPRESSION & USER INTERFACE)",
+    "3d": "(3D Modeling & Animation)",
+    "web": "(Web Design)",
+    "skulz": "SKULZ CULTURE",
+    "HEN": "HEN Popsicles",
+    "HumgerStation": "HumgerStation App",
+    "amigos": "Amigos",
+    "METAOUE": "METAOUE Art Exhibition",
+    "Lle kaVerse": "Lle kaVerse",
+    "X-HAI": "X-HAI",
+    "Amro": "Amro Maskoun",
+    "2021": "2021",
+    "2023": "2023",
+    "2024": "2024"
   }
 }
