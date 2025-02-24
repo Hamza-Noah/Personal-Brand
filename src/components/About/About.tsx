@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useTranslationContext } from "../../contexts/TranslationContext";
 import styles from "./about.module.scss";
 import about1 from "../../assets/image/about1.png";
 import about2 from "../../assets/image/about2.png";
@@ -8,13 +10,62 @@ import aboutBtn1 from "../../assets/svg/about button1.svg";
 import aboutBtn2 from "../../assets/svg/about button2.svg";
 import aboutBtn3 from "../../assets/svg/about button3.svg";
 
+const buttonImages = [aboutBtn1, aboutBtn2, aboutBtn3];
+
 const About = () => {
+  const { t } = useTranslationContext();
+  const [buttonIndexes, setButtonIndexes] = useState([0, 1, 2]);
+
+  const nextButtonImage = (buttonIndex: number) => {
+    setButtonIndexes((prevIndexes) => {
+      const newIndexes = [...prevIndexes];
+      newIndexes[buttonIndex] =
+        (newIndexes[buttonIndex] + 1) % buttonImages.length;
+      return newIndexes;
+    });
+  };
+
   return (
-    <>
-      <div className={`about`}>
-        
+    <div className={`${styles.about} ltr`}>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12 col-lg-6">
+            <div className={`${styles.icons} position-relative h-100`}>
+              <div className={`${styles["dragged-icon"]} position-absolute`}>
+                <img src={about2} alt="" />
+              </div>
+              <div className={`${styles["dragged-icon"]} position-absolute`}>
+                <img src={about1} alt="" />
+              </div>
+              <div className={`${styles["dragged-icon"]} position-absolute`}>
+                <img src={about3} alt="" />
+              </div>
+              <div className={`${styles["dragged-icon"]} position-absolute`}>
+                <img src={about4} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="col-xs-12 col-lg-6">
+            <div className={styles.info}>
+              <h2>{t("about.cannot")}</h2>
+              <p>{t("about.PROJECTS")}</p>
+              <p>{t("about.draws")}</p>
+              <div className="d-flex">
+                {buttonIndexes.map((index, i) => (
+                  <button
+                    key={i}
+                    className="btn"
+                    onClick={() => nextButtonImage(i)}
+                  >
+                    <img src={buttonImages[index]} alt="Button" />
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

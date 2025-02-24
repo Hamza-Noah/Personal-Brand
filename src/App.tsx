@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Profession from "./components/Profession";
 import Work from "./components/Work";
+import About from "./components/About";
 
 function App() {
   const { currentLang } = useTranslationContext();
@@ -30,6 +31,7 @@ function App() {
       <Landing />
       <Profession />
       <Work />
+      <About />
     </>
   );
 }
