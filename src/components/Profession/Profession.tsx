@@ -21,8 +21,13 @@ const Profession = () => {
           className="d-flex flex-wrap
          align-items-center"
         >
-          <div className={styles.job}>
+          <div className={`${styles.job}  ${styles.play} position-relative`}>
             <p>{t("profession.visual")}</p>
+            <img
+              src={playButton}
+              alt=""
+              className={`position-absolute d-none d-lg-block`}
+            />
           </div>
           <div className={styles.spinner}>
             <SpinningStar />
