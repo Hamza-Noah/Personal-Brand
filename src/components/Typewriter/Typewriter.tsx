@@ -46,12 +46,17 @@ const Typewriter = ({ text = "test", delay = 500 }) => {
   useEffect(() => {
     const blinkInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
+<<<<<<< HEAD
     }, 530);
+=======
+    }, 530); // Slightly longer than the type delay for better visual effect
+>>>>>>> 84cdec61b3776e8427eeaa271cf6156c27671ea3
 
     return () => clearInterval(blinkInterval);
   }, []);
 
   return (
+<<<<<<< HEAD
     <div style={{ position: "relative", display: "inline-block" }}>
       <span
         style={{
@@ -80,6 +85,27 @@ const Typewriter = ({ text = "test", delay = 500 }) => {
           }}
         />
       </div>
+=======
+    <div
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        textAlign: "left",
+      }}
+    >
+      <span style={{ minWidth: `${text.length}ch`, height: "192px" }}>
+        {currentText}
+      </span>
+      <img
+        src={typewriter}
+        alt=""
+        style={{
+          marginLeft: "2px",
+          visibility: showCursor ? "visible" : "hidden",
+          verticalAlign: "middle",
+        }}
+      />
+>>>>>>> 84cdec61b3776e8427eeaa271cf6156c27671ea
     </div>
   );
 };
