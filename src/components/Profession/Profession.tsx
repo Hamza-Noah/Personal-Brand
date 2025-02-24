@@ -18,11 +18,14 @@ const Profession = () => {
           {t("profession.info")}
         </p>
         <div
-          className="d-flex flex-wrap
-         align-items-center"
+          className={`${
+            currentLang == "ar" ? "justify-content-evenly row-reverse" : ""
+          } d-flex flex-wrap
+         align-items-center`}
         >
           <div className={`${styles.job}  ${styles.play} position-relative`}>
-            <p>{t("profession.visual")}</p>
+            {currentLang == "en" && <p>{t("profession.visual")}</p>}
+            {currentLang == "ar" && <p>{t("profession.visual")}</p>}
             <img
               src={playButton}
               alt=""
@@ -35,7 +38,12 @@ const Profession = () => {
           <div className={styles.job}>
             <p>
               {" "}
-              <Typewriter text={t("profession.artist")} />
+              {currentLang == "en" && (
+                <Typewriter text={t("profession.artist")} />
+              )}
+              {currentLang == "ar" && (
+                <Typewriter text={t("profession.artist")} />
+              )}
             </p>
           </div>
         </div>
