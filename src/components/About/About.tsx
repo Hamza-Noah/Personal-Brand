@@ -9,6 +9,7 @@ import about5 from "../../assets/image/about5.png";
 import aboutBtn1 from "../../assets/svg/about button1.svg";
 import aboutBtn2 from "../../assets/svg/about button2.svg";
 import aboutBtn3 from "../../assets/svg/about button3.svg";
+import Drag from "../Drag/Drag";
 
 const buttonImages = [aboutBtn1, aboutBtn2, aboutBtn3];
 
@@ -32,16 +33,16 @@ const About = () => {
           <div className="col-xs-12 col-lg-6">
             <div className={`${styles.icons} position-relative h-100`}>
               <div className={`${styles["dragged-icon"]} position-absolute`}>
-                <img src={about2} alt="" />
+                <Drag image={about2} />
               </div>
               <div className={`${styles["dragged-icon"]} position-absolute`}>
-                <img src={about1} alt="" />
+                <Drag image={about1} />
               </div>
               <div className={`${styles["dragged-icon"]} position-absolute`}>
-                <img src={about3} alt="" />
+                <Drag image={about3} />
               </div>
               <div className={`${styles["dragged-icon"]} position-absolute`}>
-                <img src={about4} alt="" />
+                <Drag image={about4} />
               </div>
             </div>
           </div>
@@ -54,7 +55,7 @@ const About = () => {
                 {buttonIndexes.map((index, i) => (
                   <button
                     key={i}
-                    className="btn"
+                    className={`btn ${styles.btn}`}
                     onClick={() => nextButtonImage(i)}
                   >
                     <img src={buttonImages[index]} alt="Button" />

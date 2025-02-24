@@ -6,6 +6,7 @@ import Landing from "./components/Landing";
 import Profession from "./components/Profession";
 import Work from "./components/Work";
 import About from "./components/About";
+import Drag from "./components/Drag/Drag";
 
 function App() {
   const { currentLang } = useTranslationContext();
