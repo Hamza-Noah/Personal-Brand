@@ -2,7 +2,7 @@ import SpinningStar from "../Spinner/Spinner";
 import playButton from "../../assets/image/paly button.png";
 import styles from "./profession.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
-import Typewriter from "../Typewriter/TypeWriter";
+import Typewriter from "../Typewriter/Typewriter";
 
 const Profession = () => {
   const { t, currentLang } = useTranslationContext();
