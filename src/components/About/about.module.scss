@@ -7,11 +7,15 @@
   h2 {
     font-size: 3rem;
     font-weight: lighter;
-    font-family: "Space Mono";
   }
+
   h2 + p {
     font-weight: 600;
     word-spacing: 5px;
+  }
+
+  .head {
+    font-size: 5rem;
   }
 
   .dragged-icon {
@@ -33,9 +37,19 @@
       z-index: 1000;
     }
   }
+
+  .movie-en {
+    right: -30px;
+    bottom: -59px;
+  }
+  .movie-ar {
+    left: 83px;
+    bottom: -71px;
+  }
 }
 
 .btn {
   outline: none !important;
   border: none !important;
+  width: 40px;
 }
