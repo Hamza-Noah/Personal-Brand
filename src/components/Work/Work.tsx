@@ -111,53 +111,55 @@ const Work = () => {
 
   return (
     <>
-      <div id="carouselExample" className="carousel slide position-relative">
-        <img
-          className={`${styles["smile"]} position-absolute`}
-          src={smile}
-          alt=""
-        />
-        <div className="carousel-inner">
-          {workProjects.map((workProject, i) => {
-            return (
-              <div
-                key={i}
-                className={`${styles.carousel} carousel-item ${
-                  i === 0 ? "active" : ""
-                }`}
-              >
-                <img
-                  src={workProject.img}
-                  className="d-block w-100 d-none d-lg-block"
-                  alt="..."
-                />
-                <img
-                  src={workProject.responsiveImg}
-                  className="d-block w-100 d-lg-none"
-                  alt="..."
-                />
-              </div>
-            );
-          })}
+      <div className={`${styles.work}`}>
+        <div id="carouselExample" className="carousel slide position-relative">
+          <img
+            className={`${styles["smile"]} position-absolute`}
+            src={smile}
+            alt=""
+          />
+          <div className="carousel-inner">
+            {workProjects.map((workProject, i) => {
+              return (
+                <div
+                  key={i}
+                  className={`${styles.carousel} carousel-item ${
+                    i === 0 ? "active" : ""
+                  }`}
+                >
+                  <img
+                    src={workProject.img}
+                    className="d-block w-100 d-none d-lg-block"
+                    alt="..."
+                  />
+                  <img
+                    src={workProject.responsiveImg}
+                    className="d-block w-100 d-lg-none"
+                    alt="..."
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <button
+            className="carousel-control-prev m-0"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <img height="30px" src={prev} alt="" />
+            <img height="30px" src={prevDark} alt="" />
+          </button>
+          <button
+            className="carousel-control-next m-0"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <img height="30px" src={next} alt="" />
+            <img height="30px" src={nextDark} alt="" />
+          </button>
         </div>
-        <button
-          className="carousel-control-prev m-0"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <img height="30px" src={prev} alt="" />
-          <img height="30px" src={prevDark} alt="" />
-        </button>
-        <button
-          className="carousel-control-next m-0"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <img height="30px" src={next} alt="" />
-          <img height="30px" src={nextDark} alt="" />
-        </button>
       </div>
     </>
   );

@@ -1,5 +1,11 @@
 @import "../../styles/variables";
 
+.work {
+  background-color: $primary-color;
+  padding-top: 100px;
+  overflow: hidden;
+}
+
 .carousel {
   background-color: $tertiary;
   padding: 2px 0;
