@@ -33,7 +33,7 @@
     }
     &:nth-child(4) {
       left: 200px;
-      bottom: -30px;
+      bottom: -40px;
       z-index: 1000;
     }
   }
@@ -45,6 +45,15 @@
   .movie-ar {
     left: 83px;
     bottom: -71px;
+  }
+}
+
+.icons {
+  @media (max-width: 991px) {
+    height: 500px !important;
+    .dragged-icon:nth-child(4) {
+      bottom: 170px;
+    }
   }
 }
 

@@ -33,8 +33,10 @@ const About = () => {
     <div className={`${styles.about} ltr`}>
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-lg-6">
-            <div className={`${styles.icons} position-relative h-100`}>
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 pt-5">
+            <div
+              className={`${styles["icons"]} position-relative h-100 d-flex align-center`}
+            >
               <div className={`${styles["dragged-icon"]} position-absolute`}>
                 <Drag image={about2} />
               </div>
@@ -49,7 +51,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="col-xs-12 col-lg-6">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
             <div className={`${styles.info} ps-5 ms-4`}>
               <h2
                 className={`${
@@ -81,9 +83,19 @@ const About = () => {
                   />
                 )}
               </h2>
-              <p>{t("about.PROJECTS")}</p>
-              <p className="pe-5 me-5">{t("about.draws")}</p>
-              <div className="d-flex">
+              <p className={currentLang == "ar" ? "rtl " + styles.head : ""}>
+                {t("about.PROJECTS")}
+              </p>
+              <p
+                className={`${
+                  currentLang == "ar"
+                    ? "rtl  ps-5 ms-5" + styles.head
+                    : "pe-5 me-5"
+                }`}
+              >
+                {t("about.draws")}
+              </p>
+              <div className={`d-flex ${currentLang == "ar" ? "rtl" : ""}`}>
                 {buttonIndexes.map((index, i) => (
                   <button
                     key={i}
