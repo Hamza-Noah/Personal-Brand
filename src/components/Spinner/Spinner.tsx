@@ -73,7 +73,7 @@ const SpinningStar = () => {
         position: "relative",
         width: "100px",
         height: "100px",
-        margin: "20px",
+        margin: "18px",
       }}
     >
       <div
