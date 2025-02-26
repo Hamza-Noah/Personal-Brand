@@ -50,7 +50,10 @@ const Landing = () => {
           <div className="col-xs-12 col-md-7">
             <div className={`${styles.branding} h-100`}>
               <div className="row h-100">
-                <div className={`${styles["first-work"]} col-lg-6`}>
+                <div
+                  className={`${styles["first-work"]} col-lg-6 px-3
+                `}
+                >
                   <div>
                     <div className="image text-center d-none d-lg-block">
                       <img
