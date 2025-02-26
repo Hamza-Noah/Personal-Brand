@@ -33,7 +33,7 @@ const About = () => {
     <div className={`${styles.about} ltr`}>
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 pt-5">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
             <div
               className={`${styles["icons"]} position-relative h-100 d-flex align-center`}
             >
