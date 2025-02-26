@@ -7,7 +7,12 @@
 }
 
 .details {
-  letter-spacing: 2;
+  word-spacing: 1px;
+  @media (max-width: 991px) {
+    & > div:nth-child(2) {
+      margin-left: 85px;
+    }
+  }
 }
 
 .year {
@@ -22,18 +27,34 @@
 .first-work {
   padding: 0 30px;
   // font-size: 0.8rem;
+  @media (max-width: 767px) {
+    order: 3;
+    & + div {
+      padding-right: 0;
+      margin-top: 70px;
+    }
+  }
 }
 
 .age {
-  font-size: 9rem;
+  @media (max-width: 991px) {
+    font-size: 6rem;
+    transform: translateY(-10px);
+  }
+  @media (min-width: 992px) {
+    transform: translateY(-25px);
+    font-size: 9rem;
+  }
   line-height: 1;
   font-weight: bolder;
-  transform: translateY(-25px);
 }
 
 .yellow-box {
   background-color: $tertiary;
   height: 100px;
+  @media (max-width: 991px) {
+    height: 80px;
+  }
   flex-grow: 1;
 }
 
@@ -61,5 +82,12 @@
     position: absolute;
     bottom: -60px;
     left: -50px;
+  }
+}
+
+.small-banner2 {
+  top: -55px;
+  left: 0 img {
+    width: 100px;
   }
 }
