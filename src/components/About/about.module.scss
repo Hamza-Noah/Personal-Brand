@@ -7,6 +7,9 @@
   h2 {
     font-size: 3rem;
     font-weight: lighter;
+    @media (max-width: 991px) {
+      margin-bottom: 70px;
+    }
   }
 
   h2 + p {
@@ -14,8 +17,10 @@
     word-spacing: 5px;
   }
 
+
   .head {
     font-size: 5rem;
+    
   }
 
   .dragged-icon {
@@ -39,16 +44,99 @@
   }
 
   .movie-en {
-    right: -30px;
     bottom: -59px;
+    @media (max-width: 991px) {
+      right: 30px;
+    }
+    @media (min-width: 992px) {
+      right: -30px;
+    }
   }
   .movie-ar {
     left: 83px;
-    bottom: -71px;
+    @media (max-width: 991px) {
+      left: 0px;
+      bottom: -120px;
+    }
+    @media (min-width: 992px) {
+      bottom: -60px;
+      left: 55px;
+    }
   }
 }
 
 .icons {
+  @media (max-width: 400px) {
+    & > div {
+      transform: scale(0.7);
+    }
+
+    & > div:nth-child(1) {
+      left: 10px;
+    }
+    & > div:nth-child(2) {
+      left: 100px !important;
+    }
+    & > div:nth-child(3) {
+      left: 130px !important;
+    }
+    & > div:nth-child(4) {
+      left: 150px !important;
+    }
+  }
+  @media (max-width: 425px) {
+    & > div {
+      transform: scale(0.7);
+    }
+
+    & > div:nth-child(1) {
+      left: 25px;
+    }
+    & > div:nth-child(2) {
+      left: 115px !important;
+    }
+    & > div:nth-child(3) {
+      left: 145px !important;
+    }
+    & > div:nth-child(4) {
+      left: 165px !important;
+    }
+  }
+  @media (max-width: 475px) {
+    & > div {
+      transform: scale(0.8);
+    }
+
+    & > div:nth-child(1) {
+      left: 40px;
+    }
+    & > div:nth-child(2) {
+      left: 130px !important;
+    }
+    & > div:nth-child(3) {
+      left: 160px !important;
+    }
+    & > div:nth-child(4) {
+      left: 180px !important;
+    }
+  }
+  @media (max-width: 575px) {
+    & > div:nth-child(1) {
+      left: 40px;
+    }
+    & > div:nth-child(2) {
+      left: 160px !important;
+    }
+    & > div:nth-child(3) {
+      left: 180px !important;
+    }
+    & > div:nth-child(4) {
+      left: 240px !important;
+    }
+  }
+  @media (max-width: 767px) {
+  }
+
   @media (max-width: 991px) {
     height: 500px !important;
     .dragged-icon:nth-child(4) {

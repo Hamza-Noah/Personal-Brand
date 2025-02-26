@@ -52,7 +52,7 @@ const About = () => {
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-            <div className={`${styles.info} ps-5 ms-4`}>
+            <div className={`${styles.info} ps-lg-5 ms-4`}>
               <h2
                 className={`${
                   currentLang == "ar" ? "rtl " + styles.head : ""
@@ -83,7 +83,7 @@ const About = () => {
                   />
                 )}
               </h2>
-              <p className={currentLang == "ar" ? "rtl " + styles.head : ""}>
+              <p className={currentLang == `ar` ? "rtl yellow fw-lighter" : ""}>
                 {t("about.PROJECTS")}
               </p>
               <p
