@@ -51,7 +51,7 @@ const Landing = () => {
             <div className={`${styles.branding} h-100`}>
               <div className="row h-100">
                 <div
-                  className={`${styles["first-work"]} col-lg-6 px-3
+                  className={`${styles["first-work"]} col-md-6 px-3
                 `}
                 >
                   <div>
@@ -70,8 +70,8 @@ const Landing = () => {
                         </p>
                       )}
                       <div
-                        className=" d-lg-none pb-3 pe-3
-                    "
+                        className={`d-lg-none pb-3 pe-3 
+                  `}
                       >
                         <span
                           className={
@@ -82,15 +82,19 @@ const Landing = () => {
                         </span>
                       </div>
                       <p
-                        className={`${currentLang === "ar" ? "rtl" : ""}
-                        
+                        className={`${
+                          currentLang === "ar"
+                            ? "rtl " + styles["first-work-description"]
+                            : ""
+                        }                           
+                        }                   
                      `}
                       >
                         {t("landing.first_work")}
                       </p>
                       {currentLang === "ar" && (
                         <p
-                          className={`${styles["first-work-date"]}  ps-3 d-none d-lg-block
+                          className={`${styles["first-work-date"]} adoody ps-3 d-none d-lg-block
                         `}
                         >
                           {t("landing.first_work_date")}
@@ -100,8 +104,8 @@ const Landing = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-3">
-                  <div className="box text-center d-flex flex-lg-column h-100">
+                <div className="col-md-3">
+                  <div className="box text-center d-flex flex-md-column h-100">
                     <div
                       className=" d-lg-none pb-3 pe-3 align-self-end
                     "
@@ -140,7 +144,7 @@ const Landing = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-3 pe-0">
+                <div className="col-md-3 pe-0">
                   <div className={`h-100 ${styles["bg-pink"]}`}></div>
                 </div>
               </div>
