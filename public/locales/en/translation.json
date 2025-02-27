@@ -41,5 +41,16 @@
     "cannot": "Cannot Resist Making Art, Love To Make Movies",
     "PROJECTS": "PROJECTS THAT MADE ME CRY",
     "draws": "I drew my first art work, I was simply taking inspirations from everything around me; family, friends, video games, my neighborhood and surely my school and my city, Damascus Syria,"
+  },
+  "career": {
+    "timeline": "Timeline",
+    "Graphic_Designer": "Graphic Designer",
+    "Art_Director": "Art Director",
+    "3D_Artist_Visual_Designer": "3D Artist | Visual Designer",
+    "Visual_Designer": "Sr. Visual Designer",
+    "Branding": "BRANDING IS WHAT WE DO",
+    "Advertising": "Digital Advertising",
+    "freelance": "Freelance",
+    "HumgerStation": "Hunger Station"
   }
 }

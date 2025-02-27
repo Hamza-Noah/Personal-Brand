@@ -37,11 +37,22 @@
     "selrf": "Selrf",
     "2021": "2021",
     "2023": "2023",
-    "2024": "2024"  
+    "2024": "2024"
   },
   "about": {
     "cannot": "لا أستطيع مقاومة صنع الفن، أعشق إنتاج الأفلام!",
     "PROJECTS": "المشاريع التي أبكتني",
     "draws": "رسمت أول عمل فني لي، وكنت ببساطة أستمد الإلهام من كل شيء حولي؛ عائلتي، أصدقائي، ألعاب الفيديو، حيي، وبالطبع مدرستي ومدينتي، دمشق، سوريا. رسمت أول عمل فني لي، وكنت ببساطة أستمد الإلهام من كل شيء حولي؛ عائلتي، أصدقائي، ألعاب الفيديو."
+  },
+  "career": {
+    "timeline": "الخط المهني",
+    "Graphic_Designer": "مصمم غرافيكي",
+    "Art_Director": "مصمم غرافيكي",
+    "3D_Artist_Visual_Designer": "مصمم غرافيكي",
+    "Visual_Designer": "مصمم غرافيكي",
+    "Branding": "BRANDING IS WHAT WE DO",
+    "Advertising": "Digital Advertising",
+    "freelance": "Freelance",
+    "HumgerStation": "Hunger Station"
   }
 }
