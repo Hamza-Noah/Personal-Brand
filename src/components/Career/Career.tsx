@@ -1,5 +1,8 @@
 import styles from "./career.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css"; // Alternative import for missing styles
+import { Pagination } from "swiper/modules";
 
 const Career = () => {
   const { t, currentLang } = useTranslationContext();
@@ -39,21 +42,46 @@ const Career = () => {
 
   return (
     <>
-      <section className={styles.career}>
+      <section
+        className={`${styles.career} ${currentLang == "ar" ? styles.ar : ""}
+        `}
+      >
         <div className="container">
           <h2 className="text-center">{t("career.timeline")}</h2>
+
+          {/* Desktop View (Grid) */}
           <div className="d-none d-md-flex justify-content-between text-center">
-            {workPeriod.map((data, i) => {
-              return (
-                <div className={styles.stage} key={i}>
-                  <p className={styles.slogan}>{data.slogan}</p>
-                  <p className={styles.location}>{data.location}</p>
-                  <h3 className={styles.position}>{data.job}</h3>
-                  <p className={styles.year}>{data.year}</p>
-                  <p className={styles.period}>{data.period}</p>
-                </div>
-              );
-            })}
+            {workPeriod.map((data, i) => (
+              <div className={styles.stage} key={i}>
+                <p className={styles.slogan}>{data.slogan}</p>
+                <p className={styles.location}>{data.location}</p>
+                <h3 className={styles.position}>{data.job}</h3>
+                <p className={styles.year}>{data.year}</p>
+                <p className={styles.period}>{data.period}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile View (Swiper) */}
+          <div className="d-md-none text-center">
+            <Swiper
+              modules={[Pagination]}
+              spaceBetween={20}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+            >
+              {workPeriod.map((data, i) => (
+                <SwiperSlide className={styles.stage} key={i}>
+                  <div className={styles.stage}>
+                    <p className={styles.slogan}>{data.slogan}</p>
+                    <p className={styles.location}>{data.location}</p>
+                    <h3 className={styles.position}>{data.job}</h3>
+                    <p className={styles.year}>{data.year}</p>
+                    <p className={styles.period}>{data.period}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>
