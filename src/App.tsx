@@ -7,6 +7,7 @@ import Profession from "./components/Profession";
 import Work from "./components/Work";
 import About from "./components/About";
 import Career from "./components/Career";
+import Footer from "./components/Footer";
 
 function App() {
   const { currentLang } = useTranslationContext();
@@ -34,6 +35,7 @@ function App() {
       <Work />
       <About />
       <Career />
+      <Footer />
     </>
   );
 }
