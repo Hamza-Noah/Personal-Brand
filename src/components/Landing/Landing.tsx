@@ -8,8 +8,6 @@ import { useTranslationContext } from "../../contexts/TranslationContext";
 const Landing = () => {
   const { t, currentLang } = useTranslationContext();
 
-  console.log(t("landing.2024_2"));
-
   return (
     <>
       <div className={`${styles.landing} py-3`}>
