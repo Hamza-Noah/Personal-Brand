@@ -10,8 +10,6 @@ const SpinningStar = () => {
   const startYRef = useRef(0);
 
   setTimeout(() => {
-    console.log("test");
-
     setSpeed(0.5);
   }, 10000);
 

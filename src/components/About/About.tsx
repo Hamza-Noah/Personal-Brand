@@ -27,8 +27,6 @@ const About = () => {
     });
   };
 
-  console.log(currentLang);
-
   return (
     <div className={`${styles.about} ltr`}>
       <div className="container">

@@ -38,8 +38,6 @@ const Career = () => {
     },
   ];
 
-  console.log(workPeriod);
-
   return (
     <>
       <section
