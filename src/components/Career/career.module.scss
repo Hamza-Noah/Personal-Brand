@@ -1,2 +1,84 @@
 @import "../../styles/variables";
 
+.career {
+  background-color: $tertiary;
+  padding: 60px 0;
+  h2 {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: $tertiary;
+    transform: translateY(-85px);
+  }
+
+  .stage:hover {
+    .position {
+      background-color: $secondary-color;
+      color: white;
+    }
+    .slogan,
+    .location,
+    .period {
+      opacity: 1;
+    }
+  }
+}
+
+.stage {
+  &:not(:last-child) .position::after {
+    content: "";
+    background-image: url(/src/assets/image/dasher.png);
+    position: absolute;
+    width: 288px;
+    height: 2px;
+    bottom: -27px;
+    left: 51%;
+  }
+  .slogan,
+  .location,
+  .period {
+    opacity:0
+  }
+
+  .slogan {
+    font-size: 0.7rem;
+    font-weight: bolder;
+    color: $primary-color;
+    margin-bottom: 0;
+  }
+
+  .location {
+    font-size: 0.7rem;
+    font-weight: lighter;
+    margin-bottom: 5px;
+  }
+
+  .position {
+    background-color: $primary-color;
+    color: $tertiary;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .position::before {
+    content: ".";
+    position: absolute;
+    font-size: 50px;
+    color: black;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .year {
+    font-weight: bolder;
+    margin-top:40px
+  }
+  .period {
+    font-size: .7rem;
+    font-weight: lighter
+  }
+}
