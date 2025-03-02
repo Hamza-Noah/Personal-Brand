@@ -4,3 +4,20 @@
     height: 150px;
   }
 }
+
+.normalSpin {
+  animation: rotate 3s linear infinite;
+}
+
+.fastSpin {
+  animation: rotate 0.5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
