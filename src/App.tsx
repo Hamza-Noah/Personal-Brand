@@ -13,7 +13,7 @@ function App() {
   const { currentLang } = useTranslationContext();
 
   useEffect(() => {
-    document.dir = i18n.dir();
+    // document.dir = i18n.dir();
     updateFontFamily();
   }, [currentLang]);
 
