@@ -7,9 +7,10 @@ const Footer = () => {
     <>
       <section className={`${styles.footer}`}>
         <div className="container">
-          <div className="col-lg-7">
+          <div className="col-lg-6">
             <Form />
           </div>
+          <div className="col-lg-1"></div>
           <div className="col-lg-5">
             <Error />
           </div>
