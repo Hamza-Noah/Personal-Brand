@@ -2,17 +2,70 @@
 
 form {
   border: solid 6px $primary-color;
-  border-radius: 15px;
-  padding-bottom: 300px;
+  border-radius: 12px;
+  box-shadow: 25px 25px $primary-color;
+  position: relative;
+
+  .inputs {
+    padding: 30px;
+    column-gap: 20px;
+    row-gap: 20px;
+    .input {
+      width: calc(50% - 10px);
+    }
+    input,
+    textarea {
+      border: solid $primary-color 1px;
+      padding: 0 10px 10px;
+      align-items: center;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: $primary-color;
+      font-weight: lighter;
+    }
+
+    input:focus-visible,
+    textarea:focus-visible {
+      border-radius: 0 !important;
+      outline: none;
+      box-shadow: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 130px;
+    }
+
+    .submit {
+      border: none;
+      background-color: $primary-color;
+      color: $white-text;
+      font-size: 1.5rem;
+      padding:0 30px 10px;
+    }
+  }
+}
+
+form::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/image/form.svg");
+  width: 200px;
+  height: 136px;
+  background-repeat: no-repeat;
+  bottom: -80px;
+  left: -50px;
 }
 
 .header {
   background-color: $primary-color;
   color: $white-text;
-  padding: 15px;
+  padding: 5px 10px;
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1;
     margin-bottom: 0;
   }
 }
@@ -31,7 +84,7 @@ form {
     content: "";
     position: absolute;
     background-color: #fff2e8;
-    top: 33%;
+    top: 10%;
     right: 15px;
     width: 1.4px;
     height: 20px;
@@ -60,5 +113,5 @@ form {
   height: 1px;
   background-color: $white-text;
   position: absolute;
-  top: 75%;
+  top: 50%;
 }
