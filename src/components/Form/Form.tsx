@@ -4,11 +4,9 @@ import { useTranslationContext } from "../../contexts/TranslationContext";
 const Form = () => {
   const { t, currentLang } = useTranslationContext();
 
-  console.log(t("form.emailPlaceholder"));
-
   return (
     <>
-      <form className={` ${currentLang == "en" ? "" : "rtl"}`}>
+      <form className={` ${currentLang == "en" ? "ltr" : "rtl"}`}>
         <div className={`${styles.header} d-flex justify-content-between`}>
           <h3>
             {t("form.title")}
@@ -43,18 +41,14 @@ const Form = () => {
           </div>
           <div
             className={`form-group ${
-              currentLang == "en" ? "me-auto" : "ms-auto"
+              currentLang == "en" ? "ms-auto" : "me-auto"
             }`}
           >
             <button className={`${styles.submit}`}>
-              TAKE MY{" "}
-              <span
-                className={`form-group ${
-                  currentLang == "en" ? "me-2" : "ms-2"
-                }`}
-              >
-                $
-              </span>
+              {t("form.submit")}
+              {currentLang == "en" && (
+                <span className={`form-group me-2`}>$</span>
+              )}
             </button>
           </div>
         </div>

@@ -1,12 +1,15 @@
 import Form from "../Form";
 import Error from "../Error";
 import styles from "./footer.module.scss";
+import { useTranslationContext } from "../../contexts/TranslationContext";
 
 const Footer = () => {
+  const { t, currentLang } = useTranslationContext();
+
   return (
     <>
       <section className={`${styles.footer}`}>
-        <div className="container">
+        <div className={`container ${currentLang == "en" ? "" : "rtl"}`}>
           <div className="col-lg-6">
             <Form />
           </div>

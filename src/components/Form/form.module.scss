@@ -12,11 +12,14 @@ form {
     row-gap: 20px;
     .input {
       width: calc(50% - 10px);
+      @media (max-width: 991px) {
+        width: 100%;
+      }
     }
     input,
     textarea {
       border: solid $primary-color 1px;
-      padding: 0 10px 10px;
+      padding: 10px;
       align-items: center;
     }
     input::placeholder,
@@ -41,21 +44,32 @@ form {
       border: none;
       background-color: $primary-color;
       color: $white-text;
-      font-size: 1.5rem;
-      padding:0 30px 10px;
+      font-size: 1rem;
+      padding: 10px 30px;
     }
   }
 }
 
-form::before {
+:global(.ltr::before) {
   content: "";
   position: absolute;
   background-image: url("../../assets/image/form.svg");
-  width: 200px;
+  width: 136px;
   height: 136px;
   background-repeat: no-repeat;
   bottom: -80px;
   left: -50px;
+}
+
+:global(.rtl::after) {
+  right: -50px !important;
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/image/form.svg");
+  width: 136px;
+  height: 136px;
+  background-repeat: no-repeat;
+  bottom: -80px;
 }
 
 .header {
