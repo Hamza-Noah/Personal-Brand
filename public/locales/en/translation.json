@@ -62,5 +62,12 @@
     "2022": "2022",
     "2023": "2023",
     "2024": "2024"
+  },
+  "form": {
+    "title": "Wanna Connect",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Message",
+    "submit": "TAKE MY"
   }
 }

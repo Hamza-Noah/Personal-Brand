@@ -64,5 +64,13 @@
     "2022": "٢٠٢٢",
     "2023": "٢٠٢٣",
     "2024": "٢٠٢٤"
+  },
+
+  "form": {
+    "title": "تود التواصل",
+    "namePlaceholder": "الاسم",
+    "emailPlaceholder": "الايميل",
+    "messagePlaceholder": "إرسال",
+    "submit": "خذ"
   }
 }
