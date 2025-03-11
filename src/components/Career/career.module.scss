@@ -9,6 +9,10 @@
     letter-spacing: 0.7px;
     color: $tertiary;
     transform: translateY(-85px);
+    &.ar {
+      font-size: 2rem;
+      transform: translateY(-107px);
+    }
   }
 
   .stage:hover {
@@ -112,6 +116,37 @@
   .position::after {
     width: 350px;
     left: 49%;
+  }
+}
+
+.career.ar {
+  .slogan,
+  .location,
+  .period {
+    font-size: 1.25rem;
+  }
+
+  .position {
+    font-size: 1.5rem;
+  }
+
+  .stage{
+    margin-top: 65px;
+  }
+
+  .year {
+    margin-bottom: 0;
+  }
+
+  .stage {
+    &:not(:last-child) .position::after {
+      bottom: -26px;
+      left: 57%;
+    }
+
+    &:nth-child(3) .position::after {
+      left: 4%;
+    }
   }
 }
 

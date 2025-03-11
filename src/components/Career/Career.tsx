@@ -32,7 +32,7 @@ const Career = () => {
     {
       job: t("career.Visual_Designer"),
       year: t("career.2023"),
-      slogan: t("career.HungerStation"),
+      slogan: t("career.HumgerStation"),
       location: t("career.dubai"),
       period: t("career.present"),
     },
@@ -45,7 +45,9 @@ const Career = () => {
         `}
       >
         <div className="container">
-          <h2 className="text-center">{t("career.timeline")}</h2>
+          <h2 className={`${currentLang == "ar" ? styles.ar : ""} text-center`}>
+            {t("career.timeline")}
+          </h2>
 
           {/* Desktop View (Grid) */}
           <div className="d-none d-md-flex justify-content-between text-center">
