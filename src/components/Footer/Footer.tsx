@@ -4,7 +4,7 @@ import styles from "./footer.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
 
 const Footer = () => {
-  const { t, currentLang } = useTranslationContext();
+  const { currentLang } = useTranslationContext();
 
   return (
     <>

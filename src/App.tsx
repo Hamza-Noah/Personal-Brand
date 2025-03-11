@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useTranslationContext } from "./contexts/TranslationContext";
-import i18n from "./i18n";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Profession from "./components/Profession";

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./spinner.module.scss";
 import star from "../../assets/image/star.svg";
 
