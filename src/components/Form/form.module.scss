@@ -7,11 +7,12 @@ form {
   position: relative;
 
   .inputs {
-    padding: 30px;
+    padding: 25px 30px;
     column-gap: 20px;
     row-gap: 20px;
     .input {
       width: calc(50% - 10px);
+
       @media (max-width: 991px) {
         width: 100%;
       }
@@ -21,6 +22,7 @@ form {
       border: solid $primary-color 1px;
       padding: 10px;
       align-items: center;
+      background-color: $white-text;
     }
     input::placeholder,
     textarea::placeholder {
@@ -45,7 +47,14 @@ form {
       background-color: $primary-color;
       color: $white-text;
       font-size: 1rem;
-      padding: 10px 30px;
+      width: 130px;
+      height: 50px;
+      font-weight: 600;
+      span {
+        font-size: 1.2rem;
+        vertical-align: middle;
+        font-weight: 500;
+      }
     }
   }
 }
@@ -57,25 +66,25 @@ form {
   width: 136px;
   height: 136px;
   background-repeat: no-repeat;
-  bottom: -80px;
+  bottom: -70px;
   left: -50px;
 }
 
 .rtl-icon::after {
-  right: -50px !important;
+  right: -58px !important;
   content: "";
   position: absolute;
   background-image: url("../../assets/image/form.svg");
   width: 136px;
   height: 136px;
   background-repeat: no-repeat;
-  bottom: -80px;
+  bottom: -70px;
 }
 
 .header {
   background-color: $primary-color;
   color: $white-text;
-  padding: 5px 10px;
+  padding: 5px 5px 5px 10px;
 
   h3 {
     font-size: 1.5rem;
@@ -128,4 +137,13 @@ form {
   background-color: $white-text;
   position: absolute;
   top: 50%;
+}
+
+.submit {
+  transition: all 0.3s ease;
+}
+
+.hovered-submit {
+  background-color: $secondary-color !important;
+  font-weight: bold;
 }

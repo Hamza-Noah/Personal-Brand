@@ -1,8 +1,10 @@
 import styles from "./form.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
+import { useState } from "react";
 
 const Form = () => {
   const { t, currentLang } = useTranslationContext();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
@@ -48,10 +50,16 @@ const Form = () => {
               currentLang == "en" ? "ms-auto" : "me-auto"
             }`}
           >
-            <button className={`${styles.submit}`}>
-              {t("form.submit")}
-              {currentLang == "en" && (
-                <span className={`form-group me-2`}>$</span>
+              <button
+              className={`${styles.submit} ${
+                isHovered ? styles["hovered-submit"] : ""
+              }`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {isHovered ? t("form.hoverSubmit") : t("form.submit")}
+              {currentLang == "en" && !isHovered && (
+                <span className={`form-group ms-2 ps-1`}>$</span>
               )}
             </button>
           </div>
