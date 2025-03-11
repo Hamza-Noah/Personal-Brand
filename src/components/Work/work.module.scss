@@ -10,7 +10,7 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.7px;
-    margin-bottom: 15px;
+    margin-bottom: 15px
   }
 }
 
@@ -18,7 +18,7 @@
   background-color: $tertiary;
   padding: 2px 0;
   @media (min-width: 992px) {
-    padding: 2px 16px;
+    padding: 2px 18px;
   }
 }
 
@@ -47,7 +47,13 @@
 }
 
 
+:global(.carousel-control-next){
+  right: -10px;
+}
 
+:global(.carousel-control-prev){
+  left: -10px;
+}
 
 :global(.carousel-control-next),
 :global(.carousel-control-prev) {
