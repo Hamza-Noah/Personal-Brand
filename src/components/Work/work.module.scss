@@ -4,6 +4,14 @@
   background-color: $primary-color;
   padding-top: 100px;
   overflow: hidden;
+
+  .title {
+    color: $tertiary;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 15px;
+  }
 }
 
 .carousel {
@@ -16,7 +24,7 @@
 
 .smile {
   z-index: 2;
-  top: -100px;
+  top: -70px;
   right: 100px;
   @media (max-width: 991px) {
     right: -35px;
@@ -38,23 +46,48 @@
   transition: none !important;
 }
 
+:global(.carousel-control-next) {
+  right: 40px;
+}
+
+:global(.carousel-control-prev) {
+  left: 40px;
+}
+
+
+
 :global(.carousel-control-next),
 :global(.carousel-control-prev) {
   opacity: 1;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
 
-  &:hover img {
+  &:hover {
     background-color: $tertiary;
-    padding: 20px 10px;
-    &:first-child {
-      display: none;
-    }
+  }
 
-    &:last-child {
-      display: block;
-    }
+  img{
+    height: 20px;
   }
 
   img:last-child {
-    display: none;
+    display: none; // Hide the black arrow by default
+  }
+
+  &:hover img:first-child {
+    display: none; // Hide the default arrow on hover
+  }
+
+  &:hover img:last-child {
+    display: block; // Show the black arrow on hover
+    background-color: $tertiary;
+  }
+}
+
+.work.ar {
+  .title {
+    font-size: 1.5rem;
   }
 }

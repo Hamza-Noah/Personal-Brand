@@ -28,7 +28,7 @@ import smile from "../../assets/image/Smile cover.png";
 import styles from "./work.module.scss";
 
 const Work = () => {
-  const { t } = useTranslationContext();
+  const { t, currentLang } = useTranslationContext();
 
   const workProjects: {
     img: any;
@@ -111,8 +111,10 @@ const Work = () => {
 
   return (
     <>
-      <div className={`${styles.work}`}>
+      <div className={`${styles.work} ${currentLang == "ar" ? styles.ar : ""}`}>
         <div id="carouselExample" className="carousel slide position-relative">
+          <h2 className={`${styles.title} text-center `}>{t("work.work")}</h2>
+
           <img
             className={`${styles["smile"]} position-absolute`}
             src={smile}
