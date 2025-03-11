@@ -20,7 +20,7 @@ function App() {
   const updateFontFamily = () => {
     if (currentLang === "ar") {
       document.body.style.fontFamily = "ArabicPoetryExtendedMedium, adoody";
-      document.body.style.fontSize = "1.25rem";
+      document.body.style.fontSize = "1.5rem";
     } else {
       document.body.style.fontFamily = "Space Mono, sans-serif";
       document.body.style.fontSize = ".8rem";
