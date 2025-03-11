@@ -71,6 +71,7 @@
     "namePlaceholder": "الاسم",
     "emailPlaceholder": "الايميل",
     "messagePlaceholder": "الرسالة",
-    "submit": "إرسال"
+    "submit": "إرسال",
+    "hoverSubmit": "إرسال"
   }
 }

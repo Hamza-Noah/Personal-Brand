@@ -68,6 +68,7 @@
     "namePlaceholder": "Name",
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Message",
-    "submit": "TAKE MY"
+    "submit": "TAKE MY",
+    "hoverSubmit": "SEND"
   }
 }
