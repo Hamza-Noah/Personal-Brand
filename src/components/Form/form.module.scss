@@ -50,6 +50,14 @@ form {
       width: 130px;
       height: 50px;
       font-weight: 600;
+      transition: all 0.3s ease;
+      &.hovered-submit {
+        background-color: $secondary-color !important;
+        font-weight: bold;
+      }
+      &.ar {
+        font-size: 2rem !important;
+      }
       span {
         font-size: 1.2rem;
         vertical-align: middle;
@@ -84,7 +92,7 @@ form {
 .header {
   background-color: $primary-color;
   color: $white-text;
-  padding: 5px 5px 5px 10px;
+  padding: 5px 5px 10px 10px;
 
   h3 {
     font-size: 1.5rem;
@@ -137,13 +145,4 @@ form {
   background-color: $white-text;
   position: absolute;
   top: 50%;
-}
-
-.submit {
-  transition: all 0.3s ease;
-}
-
-.hovered-submit {
-  background-color: $secondary-color !important;
-  font-weight: bold;
 }

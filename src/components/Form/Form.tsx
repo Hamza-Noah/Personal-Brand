@@ -50,10 +50,10 @@ const Form = () => {
               currentLang == "en" ? "ms-auto" : "me-auto"
             }`}
           >
-              <button
+            <button
               className={`${styles.submit} ${
                 isHovered ? styles["hovered-submit"] : ""
-              }`}
+              } ${currentLang == "ar" ? styles.ar  : ""}`}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
