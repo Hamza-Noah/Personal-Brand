@@ -50,7 +50,7 @@ form {
   }
 }
 
-:global(.ltr::before) {
+.ltr-icon::before {
   content: "";
   position: absolute;
   background-image: url("../../assets/image/form.svg");
@@ -61,7 +61,7 @@ form {
   left: -50px;
 }
 
-:global(.rtl::after) {
+.rtl-icon::after {
   right: -50px !important;
   content: "";
   position: absolute;

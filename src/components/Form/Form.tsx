@@ -6,7 +6,11 @@ const Form = () => {
 
   return (
     <>
-      <form className={` ${currentLang == "en" ? "ltr" : "rtl"}`}>
+      <form
+        className={` ${
+          currentLang == "en" ? styles["ltr-icon"] : styles["rtl-icon"]
+        }`}
+      >
         <div className={`${styles.header} d-flex justify-content-between`}>
           <h3>
             {t("form.title")}
