@@ -6,7 +6,7 @@
   padding: 60px 0;
   h2 {
     font-size: 0.7rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.7px;
     color: $tertiary;
     transform: translateY(-85px);
   }
@@ -111,7 +111,7 @@
 
   .position::after {
     width: 350px;
-    left: 49%
+    left: 49%;
   }
 }
 
