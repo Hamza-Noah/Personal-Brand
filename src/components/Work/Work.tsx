@@ -184,7 +184,7 @@ const Work = () => {
                         workProject.linksColor == "yellow"
                           ? styles["yellow-links"]
                           : styles["black-links"]
-                      }`}
+                      } d-none d-md-block`}
                     >
                       <a href="#" target="_blank">
                         Behance
@@ -201,6 +201,19 @@ const Work = () => {
                       >
                         Instagram
                       </a>
+                    </div>
+                    <div className={`${styles["project-details"]} d-flex justify-content-between`}>
+                      <div className="type">
+                        {workProject.type}
+                      </div>
+                      <div className="name">
+                      {workProject.name}
+
+                      </div>
+                      <div className="year">
+                      {workProject.year}
+
+                      </div>
                     </div>
                   </div>
                 </div>

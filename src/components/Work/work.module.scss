@@ -3,7 +3,7 @@
 .work {
   background-color: $primary-color;
   padding-top: 100px;
-  overflow: hidden;
+  overflow-x: hidden;
 
   .title {
     color: $tertiary;
@@ -58,7 +58,7 @@
 :global(.carousel-control-prev) {
   opacity: 1;
   height: 40px;
-  top: 50%;
+  top: 46%;
   padding: 5px;
 
   &:hover {
@@ -81,6 +81,10 @@
     display: block; // Show the black arrow on hover
     background-color: $tertiary;
   }
+}
+
+:global(.carousel-inner) {
+  padding-bottom: 50px;
 }
 
 .work.ar {
@@ -133,7 +137,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    top: 60%;
+    top: 50%;
     a {
       text-decoration: none;
       margin: 0 10px;
@@ -154,6 +158,27 @@
 
     &.yellow-links a {
       color: $tertiary;
+    }
+  }
+
+  .project-details {
+    height: 30px;
+    transform: translateY(30px);
+    div {
+      color: $tertiary;
+      font-size: .75rem;
+    }
+
+    div:last-child {
+
+      text-align: end;
+      }
+
+    @media (min-width: 992px) {
+      div:first-child,
+      div:last-child {
+        width: 25%;
+      }
     }
   }
 }
