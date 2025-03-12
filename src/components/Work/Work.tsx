@@ -28,9 +28,11 @@ import signatureDark from "../../assets/svg/signature-dark.svg";
 import smile from "../../assets/image/Smile cover.png";
 
 import styles from "./work.module.scss";
+import { useState } from "react";
 
 const Work = () => {
   const { t, currentLang } = useTranslationContext();
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   const workProjects: {
     img: any;
@@ -186,21 +188,31 @@ const Work = () => {
                           : styles["black-links"]
                       } d-none d-md-block`}
                     >
-                      <a href="#" target="_blank">
-                        Behance
-                      </a>
-                      <a href="#" target="_blank">
-                        Youtube
-                      </a>
-                      <a
-                        className={`${
-                          workProject.linksColor ? styles["black-link"] : ""
-                        }`}
-                        href="#"
-                        target="_blank"
-                      >
-                        Instagram
-                      </a>
+                   <a
+    href="#"
+    target="_blank"
+    onMouseEnter={() => setHoveredLink("behance")}
+    onMouseLeave={() => setHoveredLink(null)}
+  >
+    {hoveredLink === "behance" ? "Coming Soon" : "Behance"}
+  </a>
+  <a
+    href="#"
+    target="_blank"
+    onMouseEnter={() => setHoveredLink("youtube")}
+    onMouseLeave={() => setHoveredLink(null)}
+  >
+    {hoveredLink === "youtube" ? "Coming Soon" : "Youtube"}
+  </a>
+  <a
+    className={`${workProject.linksColor ? styles["black-link"] : ""}`}
+    href="#"
+    target="_blank"
+    onMouseEnter={() => setHoveredLink("instagram")}
+    onMouseLeave={() => setHoveredLink(null)}
+  >
+    {hoveredLink === "instagram" ? "Coming Soon" : "Instagram"}
+  </a>
                     </div>
                     <div className={`${styles["project-details"]} d-flex justify-content-between`}>
                       <div className="type">
