@@ -23,6 +23,8 @@ import next from "../../assets/image/left.svg";
 import nextDark from "../../assets/svg/right-black.svg";
 import prev from "../../assets/image/right.svg";
 import prevDark from "../../assets/svg/left-black.svg";
+import signatureYellow from "../../assets/svg/signature-yellow.svg";
+import signatureDark from "../../assets/svg/signature-dark.svg";
 import smile from "../../assets/image/Smile cover.png";
 
 import styles from "./work.module.scss";
@@ -36,6 +38,7 @@ const Work = () => {
     type: string;
     name: string;
     year: string;
+    logoColor: string;
   }[] = [
     {
       img: cover1,
@@ -43,6 +46,7 @@ const Work = () => {
       type: t("work.3d"),
       name: t("work.skulz"),
       year: "2022",
+      logoColor: "yellow",
     },
     {
       img: cover2,
@@ -50,6 +54,7 @@ const Work = () => {
       type: t("work.3d"),
       name: t("work.skulz"),
       year: "2022",
+      logoColor: "yellow",
     },
     {
       img: cover3,
@@ -57,6 +62,7 @@ const Work = () => {
       type: t("work.editing"),
       name: t("work.amigos"),
       year: "2024",
+      logoColor: "yellow",
     },
     {
       img: cover4,
@@ -64,6 +70,7 @@ const Work = () => {
       type: t("work.web"),
       name: t("work.Amro"),
       year: "2024",
+      logoColor: "yellow",
     },
     {
       img: cover5,
@@ -71,6 +78,7 @@ const Work = () => {
       type: t("work.modeling"),
       name: t("work.HEN"),
       year: "2021",
+      logoColor: "yellow",
     },
     {
       img: cover6,
@@ -78,6 +86,7 @@ const Work = () => {
       type: t("work.brand"),
       name: t("work.HumgerStation"),
       year: "2024",
+      logoColor: "yellow",
     },
     {
       img: cover7,
@@ -85,6 +94,7 @@ const Work = () => {
       type: t("work.3d"),
       name: t("work.mekaverse"),
       year: "2022",
+      logoColor: "black",
     },
     {
       img: cover8,
@@ -92,6 +102,7 @@ const Work = () => {
       type: t("work.modeling"),
       name: t("work.X_HAI"),
       year: "2022",
+      logoColor: "black",
     },
     {
       img: cover9,
@@ -99,6 +110,7 @@ const Work = () => {
       type: t("work.3d"),
       name: t("work.METAOUE"),
       year: "2024",
+      logoColor: "black",
     },
     {
       img: cover10,
@@ -106,6 +118,7 @@ const Work = () => {
       type: t("work.3d"),
       name: t("work.selrf"),
       year: "2024",
+      logoColor: "yellow",
     },
   ];
 
@@ -125,9 +138,9 @@ const Work = () => {
               return (
                 <div
                   key={i}
-                  className={`${styles.carousel} carousel-item ${
-                    i === 0 ? "active" : ""
-                  }`}
+                  className={`${
+                    styles.carousel
+                  } carousel-item position-relative ${i === 0 ? "active" : ""}`}
                 >
                   <img
                     src={workProject.img}
@@ -139,6 +152,31 @@ const Work = () => {
                     className="d-block w-100 d-lg-none"
                     alt="..."
                   />
+                  <div className={`${styles.content} position-absolute`}>
+                    <div className="signature">
+                      <img
+                        src={
+                          workProject.logoColor == "yellow"
+                            ? signatureYellow
+                            : signatureDark
+                        }
+                        alt=""
+                      />
+                      <img src={signatureDark} alt="" />
+                      <span>{t("work.worry")}</span>
+                    </div>
+                    <div className="links d-none">
+                      <a href="#" target="_blank">
+                        Behance
+                      </a>
+                      <a href="#" target="_blank">
+                        Youtube
+                      </a>
+                      <a href="#" target="_blank">
+                        Instagram
+                      </a>
+                    </div>
+                  </div>
                 </div>
               );
             })}

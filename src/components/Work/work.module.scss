@@ -10,7 +10,7 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.7px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
   }
 }
 
@@ -46,12 +46,11 @@
   transition: none !important;
 }
 
-
-:global(.carousel-control-next){
+:global(.carousel-control-next) {
   right: -10px;
 }
 
-:global(.carousel-control-prev){
+:global(.carousel-control-prev) {
   left: -10px;
 }
 
@@ -66,7 +65,7 @@
     background-color: $tertiary;
   }
 
-  img{
+  img {
     height: 20px;
   }
 
@@ -87,5 +86,49 @@
 .work.ar {
   .title {
     font-size: 1.5rem;
+  }
+}
+
+.content {
+  left: 30px;
+  right: 40px;
+  height: 50px;
+  bottom: 20px;
+  div {
+    width: 160px;
+    height: 55px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+
+    &:hover img:nth-child(2) {
+      display: none;
+    }
+
+    span {
+      opacity: 0;
+      font-size: 0.6rem;
+      color: $primary-color;
+    }
+
+    img{
+      height: 32px
+    }
+
+    &:hover {
+      background-color: $tertiary;
+      img:first-child {
+        display: none !important;
+      }
+      img:nth-child(2) {
+        display: block !important;
+      }
+
+      span {
+        opacity: 1;
+      }
+    }
   }
 }
