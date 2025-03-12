@@ -95,8 +95,8 @@
   height: 50px;
   bottom: 20px;
   div {
-    width: 160px;
-    height: 55px;
+    width: 140px;
+    height: 50px;
     font-size: 0.8rem;
     display: flex;
     align-items: center;
@@ -109,13 +109,10 @@
 
     span {
       opacity: 0;
-      font-size: 0.6rem;
+      font-size: 0.5rem;
       color: $primary-color;
     }
 
-    img{
-      height: 32px
-    }
 
     &:hover {
       background-color: $tertiary;
