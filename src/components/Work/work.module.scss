@@ -95,7 +95,7 @@
   height: 50px;
   bottom: 20px;
 
-  div {
+  .signature {
     width: 140px;
     height: 50px;
     font-size: 0.8rem;
@@ -126,6 +126,34 @@
       span {
         opacity: 1;
       }
+    }
+  }
+
+  .links {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 60%;
+    a {
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bolder;
+      padding: 5px 20px;
+      font-size: 0.75rem;
+    }
+
+    a:hover {
+      background-color: $tertiary;
+      color: $primary-color !important;
+      font-size: 0.875rem;
+    }
+
+    &.black-links a {
+      color: $primary-color !important;
+    }
+
+    &.yellow-links a {
+      color: $tertiary;
     }
   }
 }

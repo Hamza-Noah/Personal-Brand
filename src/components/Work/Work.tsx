@@ -39,6 +39,8 @@ const Work = () => {
     name: string;
     year: string;
     logoColor: string;
+    linksColor: string;
+    firstLinkColor?: string;
   }[] = [
     {
       img: cover1,
@@ -47,6 +49,7 @@ const Work = () => {
       name: t("work.skulz"),
       year: "2022",
       logoColor: "yellow",
+      linksColor: "yellow",
     },
     {
       img: cover2,
@@ -55,6 +58,7 @@ const Work = () => {
       name: t("work.skulz"),
       year: "2022",
       logoColor: "yellow",
+      linksColor: "yellow",
     },
     {
       img: cover3,
@@ -63,6 +67,7 @@ const Work = () => {
       name: t("work.amigos"),
       year: "2024",
       logoColor: "yellow",
+      linksColor: "yellow",
     },
     {
       img: cover4,
@@ -71,6 +76,7 @@ const Work = () => {
       name: t("work.Amro"),
       year: "2024",
       logoColor: "yellow",
+      linksColor: "yellow",
     },
     {
       img: cover5,
@@ -79,6 +85,7 @@ const Work = () => {
       name: t("work.HEN"),
       year: "2021",
       logoColor: "yellow",
+      linksColor: "yellow",
     },
     {
       img: cover6,
@@ -87,6 +94,7 @@ const Work = () => {
       name: t("work.HumgerStation"),
       year: "2024",
       logoColor: "yellow",
+      linksColor: "yellow",
     },
     {
       img: cover7,
@@ -95,6 +103,8 @@ const Work = () => {
       name: t("work.mekaverse"),
       year: "2022",
       logoColor: "black",
+      linksColor: "yellow",
+      firstLinkColor: "black",
     },
     {
       img: cover8,
@@ -103,6 +113,7 @@ const Work = () => {
       name: t("work.X_HAI"),
       year: "2022",
       logoColor: "black",
+      linksColor: "yellow",
     },
     {
       img: cover9,
@@ -111,6 +122,7 @@ const Work = () => {
       name: t("work.METAOUE"),
       year: "2024",
       logoColor: "black",
+      linksColor: "black",
     },
     {
       img: cover10,
@@ -119,6 +131,8 @@ const Work = () => {
       name: t("work.selrf"),
       year: "2024",
       logoColor: "yellow",
+      linksColor: "black",
+      firstLinkColor: "black",
     },
   ];
 
@@ -153,7 +167,7 @@ const Work = () => {
                     alt="..."
                   />
                   <div className={`${styles.content} position-absolute`}>
-                    <div className="signature">
+                    <div className={`${styles.signature}`}>
                       <img
                         src={
                           workProject.logoColor == "yellow"
@@ -165,14 +179,26 @@ const Work = () => {
                       <img src={signatureDark} alt="" />
                       <span>{t("work.worry")}</span>
                     </div>
-                    <div className="links d-none">
+                    <div
+                      className={`${styles.links}  ${
+                        workProject.linksColor == "yellow"
+                          ? styles["yellow-links"]
+                          : styles["black-links"]
+                      }`}
+                    >
                       <a href="#" target="_blank">
                         Behance
                       </a>
                       <a href="#" target="_blank">
                         Youtube
                       </a>
-                      <a href="#" target="_blank">
+                      <a
+                        className={`${
+                          workProject.linksColor ? styles["black-link"] : ""
+                        }`}
+                        href="#"
+                        target="_blank"
+                      >
                         Instagram
                       </a>
                     </div>
