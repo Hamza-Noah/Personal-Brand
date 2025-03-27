@@ -82,7 +82,7 @@
       left: 150px !important;
     }
   }
-  @media (max-width: 425px) {
+  @media (min-width: 424px) and (max-width: 425px) {
     & > div {
       transform: scale(0.7);
     }
@@ -100,7 +100,7 @@
       left: 165px !important;
     }
   }
-  @media (max-width: 475px) {
+  @media (min-width: 474px) and (max-width: 475px) {
     & > div {
       transform: scale(0.8);
     }
@@ -118,12 +118,12 @@
       left: 180px !important;
     }
   }
-  @media (max-width: 575px) {
+  @media (min-width: 476px) and (max-width: 575px) {
     & > div:nth-child(1) {
-      left: 40px;
+      left: 80px;
     }
     & > div:nth-child(2) {
-      left: 160px !important;
+      left: 260px !important;
     }
     & > div:nth-child(3) {
       left: 180px !important;
