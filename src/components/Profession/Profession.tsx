@@ -25,7 +25,7 @@ const Profession = () => {
         >
           <div className={`${styles.job}  ${styles.play} position-relative`}>
             {currentLang == "en" && <p>{t("profession.visual")}</p>}
-            {currentLang == "ar" && <p>{t("profession.visual")}</p>}
+            {currentLang == "ar" && <p>{t("profession.artist")}</p>}
             <img
               src={playButton}
               alt=""
@@ -42,7 +42,7 @@ const Profession = () => {
                 <Typewriter text={t("profession.artist")} />
               )}
               {currentLang == "ar" && (
-                <Typewriter text={t("profession.artist")} />
+                <Typewriter text={t("profession.visual")} />
               )}
             </p>
           </div>
