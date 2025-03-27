@@ -1,4 +1,6 @@
 import { useTranslationContext } from "../../contexts/TranslationContext";
+import { useEffect, useState } from "react";
+import { Carousel } from "bootstrap";
 import cover1 from "../../assets/image/covers/cover1.jpg";
 import cover2 from "../../assets/image/covers/cover2.jpg";
 import cover3 from "../../assets/image/covers/cover3.jpg";
@@ -28,15 +30,28 @@ import signatureDark from "../../assets/svg/signature-dark.svg";
 import smile from "../../assets/image/Smile cover.png";
 
 import styles from "./work.module.scss";
-import { useState } from "react";
+
+
+
 
 const Work = () => {
   const { t, currentLang } = useTranslationContext();
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
+  
+useEffect(() => {
+  const carouselElement = document.getElementById("carouselExample");
+  if (carouselElement) {
+    new Carousel(carouselElement, {
+      interval: 3000,
+      ride: "carousel",
+    });
+  }
+}, []);
+
   const workProjects: {
-    img: any;
-    responsiveImg: any;
+    img: string;
+    responsiveImg: string;
     type: string;
     name: string;
     year: string;
@@ -236,6 +251,7 @@ const Work = () => {
             className="carousel-control-prev m-0"
             type="button"
             data-bs-target="#carouselExample"
+            data-bs-ride="carousel" data-bs-interval="3000"
             data-bs-slide="prev"
           >
             <img height="30px" src={prev} alt="" />
