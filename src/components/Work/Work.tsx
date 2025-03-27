@@ -43,7 +43,11 @@ useEffect(() => {
   const carouselElement = document.getElementById("carouselExample");
   if (carouselElement) {
     new Carousel(carouselElement, {
+<<<<<<< HEAD
       interval: 8000,
+=======
+      interval: 5000,
+>>>>>>> c443e9fcb30c016b0af819467198df30472d6313
       ride: "carousel",
     });
   }
@@ -251,7 +255,11 @@ useEffect(() => {
             className="carousel-control-prev m-0"
             type="button"
             data-bs-target="#carouselExample"
+<<<<<<< HEAD
             data-bs-ride="carousel" data-bs-interval="8000"
+=======
+            data-bs-ride="carousel" data-bs-interval="5000"
+>>>>>>> c443e9fcb30c016b0af819467198df30472d6313
             data-bs-slide="prev"
           >
             <img height="30px" src={prev} alt="" />
