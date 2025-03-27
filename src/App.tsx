@@ -28,13 +28,15 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Landing />
-      <Profession />
-      <Work />
-      <About />
-      <Career />
-      <Footer />
+    <div className="overflow-hidden">  
+        <Navbar />
+        <Landing />
+        <Profession />
+        <Work />
+        <About />
+        <Career />
+        <Footer />
+    </div>
     </>
   );
 }
