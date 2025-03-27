@@ -20,7 +20,7 @@ const Profession = () => {
         <div
           className={`${
             currentLang == "ar" ? "justify-content-evenly row-reverse" : ""
-          } d-flex flex-wrap
+          } d-flex flex-column flex-lg-row
          align-items-center`}
         >
           <div className={`${styles.job}  ${styles.play} position-relative`}>
@@ -32,7 +32,7 @@ const Profession = () => {
               className={`position-absolute d-none d-lg-block`}
             />
           </div>
-          <div className={styles.spinner}>
+          <div className={`${styles.spinner} d-flex justify-content-center`}>
             <SpinningStar />
           </div>
           <div className={styles.job}>
