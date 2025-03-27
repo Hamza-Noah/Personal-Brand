@@ -43,7 +43,7 @@ useEffect(() => {
   const carouselElement = document.getElementById("carouselExample");
   if (carouselElement) {
     new Carousel(carouselElement, {
-      interval: 3000,
+      interval: 8000,
       ride: "carousel",
     });
   }
@@ -251,7 +251,7 @@ useEffect(() => {
             className="carousel-control-prev m-0"
             type="button"
             data-bs-target="#carouselExample"
-            data-bs-ride="carousel" data-bs-interval="3000"
+            data-bs-ride="carousel" data-bs-interval="8000"
             data-bs-slide="prev"
           >
             <img height="30px" src={prev} alt="" />
