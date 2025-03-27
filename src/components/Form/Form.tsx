@@ -41,7 +41,7 @@ const Form = () => {
           <div className="form-group w-100">
             <textarea
               name=""
-              placeholder={t("form.emailPlaceholder")}
+              placeholder={t("form.messagePlaceholder")}
               className="w-100"
             ></textarea>
           </div>
