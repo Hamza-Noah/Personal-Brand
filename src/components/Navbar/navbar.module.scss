@@ -5,10 +5,14 @@
   padding: 20px 0;
 }
 
+
 .language-btn {
   color: #fff2e8;
   border: none;
   background-color: unset;
+  font-size: .75rem !important;
+padding: 0 3px;
+height: 18px;
 }
 
 .language-btn-active {
@@ -28,4 +32,11 @@
 }
 .dropdown-toggle::after {
   content: none !important;
+}
+
+
+.navbar.ar{
+  .language-btn{
+    font-size: 17px !important;
+  }
 }
