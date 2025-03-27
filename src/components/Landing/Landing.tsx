@@ -26,8 +26,6 @@ const Landing = () => {
                 className={`image text-center d-lg-none position-absolute ${styles["small-banner2"]}`}
               >
                 <img
-                  className={`${currentLang === "ar" ? "" : "ms-3"} 
-                        }`}
                   src={banner2Responsive}
                   alt=""
                 />
