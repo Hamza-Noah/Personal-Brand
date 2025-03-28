@@ -9,7 +9,7 @@ const Profession = () => {
 
   return (
     <>
-    <div className={`${styles.profession} ${currentLang === "ar" ? styles.ar : ""} text-center`}>
+    <div className={`${styles.profession} ${currentLang === "ar" ? styles.ar + " rtl" : ""} text-center`}>
         <p
           className={`${
             currentLang === "en" ? "fw-bolder" : ""
@@ -20,8 +20,8 @@ const Profession = () => {
         <div
           className={`${
             currentLang == "ar" ? "justify-content-evenly row-reverse" : ""
-          } d-flex flex-column flex-lg-row
-         align-items-center`}
+          } d-flex flex-column flex-md-row
+         align-items-center justify-content-center`}
         >
           <div className={`${styles.job}  ${styles.play} position-relative`}>
             {currentLang == "en" && <p>{t("profession.visual")}</p>}
@@ -54,8 +54,9 @@ const Profession = () => {
                 <Typewriter text={t("profession.artist")} />
               )}
               
+              {currentLang == "ar" && (
 <Typewriter text={t("profession.artist")} />
-            </p>
+               )} </p>
           </div>
         </div>
       </div>
