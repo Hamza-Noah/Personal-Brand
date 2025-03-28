@@ -175,12 +175,12 @@ useEffect(() => {
                 >
                   <img
                     src={workProject.img}
-                    className="d-block w-100 d-none d-lg-block"
+                    className="d-block w-100 d-none d-md-block"
                     alt="..."
                   />
                   <img
                     src={workProject.responsiveImg}
-                    className="d-block w-100 d-lg-none"
+                    className="d-block w-100 d-md-none"
                     alt="..."
                   />
                   <div className={`${styles.content} position-absolute`}>
