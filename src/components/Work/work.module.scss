@@ -32,12 +32,13 @@
 }
 @media (min-width: 992px) {
   :global(.carousel-control-next) {
-    transform: translateX(-50px);
+    transform: translateX(10px);
+
 
     width: fit-content;
   }
   :global(.carousel-control-prev) {
-    transform: translateX(50px);
+    transform: translateX(-10px);
     width: fit-content;
   }
 }
@@ -47,11 +48,13 @@
 }
 
 :global(.carousel-control-next) {
-  right: -10px;
+  right: 10px;
+  width: 20px;
 }
 
 :global(.carousel-control-prev) {
-  left: -10px;
+  width: 20px;
+  left: 10px;
 }
 
 :global(.carousel-control-next),
