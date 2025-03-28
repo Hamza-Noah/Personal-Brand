@@ -27,7 +27,15 @@ const Profession = () => {
             {currentLang == "en" && <p>{t("profession.visual")}</p>}
 
             {currentLang == "ar" && (
-             <p className={`${currentLang == "ar" ? "rtl": ""}`}><Typewriter text={t("profession.artist")} /></p>
+             <p>
+
+
+{currentLang == "ar" && (
+                t("profession.visual")
+              )}
+
+
+             </p>
               )}
 
             <img
@@ -40,14 +48,13 @@ const Profession = () => {
             <SpinningStar />
           </div>
           <div className={styles.job}>
-            <p>
+            <p className={`${currentLang == "ar" ? "rtl": ""}`}>
               {" "}
               {currentLang == "en" && (
                 <Typewriter text={t("profession.artist")} />
               )}
-              {currentLang == "ar" && (
-                t("profession.visual")
-              )}
+              
+<Typewriter text={t("profession.artist")} />
             </p>
           </div>
         </div>
