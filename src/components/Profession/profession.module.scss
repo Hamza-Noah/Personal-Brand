@@ -25,14 +25,19 @@
       }
     }
     p {
-      font-size: 8rem;
 
-      @media (max-width: 1024px) {
-      font-size: 7rem;
-      }
-        @media (max-width: 991px) {
+      @media (max-width: 991px) {
         font-size: 5rem;
       }
+      @media (max-width: 1024px) {
+      font-size: 6rem;
+      }
+      
+      @media (min-width: 1024px) {
+      font-size: 8rem;
+      }
+
+      
     }
 
   }
