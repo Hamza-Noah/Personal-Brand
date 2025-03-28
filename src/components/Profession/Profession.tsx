@@ -9,7 +9,7 @@ const Profession = () => {
 
   return (
     <>
-      <div className={`${styles.profession} text-center`}>
+    <div className={`${styles.profession} ${currentLang === "ar" ? styles.ar : ""} text-center`}>
         <p
           className={`${
             currentLang === "en" ? "fw-bolder" : ""
@@ -25,7 +25,11 @@ const Profession = () => {
         >
           <div className={`${styles.job}  ${styles.play} position-relative`}>
             {currentLang == "en" && <p>{t("profession.visual")}</p>}
-            {currentLang == "ar" && <p>{t("profession.artist")}</p>}
+
+            {currentLang == "ar" && (
+             <p className={`${currentLang == "ar" ? "rtl": ""}`}><Typewriter text={t("profession.artist")} /></p>
+              )}
+
             <img
               src={playButton}
               alt=""
@@ -42,7 +46,7 @@ const Profession = () => {
                 <Typewriter text={t("profession.artist")} />
               )}
               {currentLang == "ar" && (
-                <Typewriter text={t("profession.visual")} />
+                t("profession.visual")
               )}
             </p>
           </div>

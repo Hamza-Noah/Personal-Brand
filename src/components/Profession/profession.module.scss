@@ -30,11 +30,21 @@
         font-size: 5rem;
       }
     }
+
   }
 
   .play img {
     top: -70px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+
+.ar {
+
+  .job p {
+    font-size: 10rem;
+    transform: translateY(-30px);
   }
 }
