@@ -229,6 +229,9 @@ useEffect(() => {
     {hoveredLink === "instagram" ? "Coming Soon" : "Instagram"}
   </a>
                     </div>
+                    <div className={`${styles.view} position-absolute d-lg-none`}>
+                      View More <span>+</span>
+                    </div>
                     <div className={`${styles["project-details"]} d-flex justify-content-between`}>
                       <div className="type">
                         {workProject.type}
@@ -242,6 +245,7 @@ useEffect(() => {
 
                       </div>
                     </div>
+
                   </div>
                 </div>
               );
