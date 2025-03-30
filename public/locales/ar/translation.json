@@ -73,5 +73,12 @@
     "messagePlaceholder": "الرسالة",
     "submit": "إرسال",
     "hoverSubmit": "إرسال"
+  },
+  "error": {
+    "error": "مشكلة",
+    "close": "الرجاء عدم إغلاق النافذة",
+    "seriously": "SEARIOUSLY?",
+    "happy": "ARE YOU HAPPY NOW?",
+    "won": "You Won."
   }
 }
