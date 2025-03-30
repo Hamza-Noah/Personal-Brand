@@ -10,12 +10,14 @@ const Footer = () => {
     <>
       <section className={`${styles.footer}`}>
         <div className={`container ${currentLang == "en" ? "" : "rtl"}`}>
-          <div className="col-lg-6">
-            <Form />
-          </div>
-          <div className="col-lg-1"></div>
-          <div className="col-lg-5">
-            <Error />
+          <div className="row row-gap-5">
+            <div className="col-lg-6">
+              <Form />
+            </div>
+            <div className="col-lg-1"></div>
+            <div className="col-lg-5">
+              <Error />
+            </div>
           </div>
         </div>
       </section>
