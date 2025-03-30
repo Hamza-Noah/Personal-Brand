@@ -70,5 +70,12 @@
     "messagePlaceholder": "Message",
     "submit": "TAKE MY",
     "hoverSubmit": "SEND"
+  },
+  "error": {
+    "error": "ERROR",
+    "close": "Do Not Close This.",
+    "seriously": "SEARIOUSLY?",
+    "happy": "ARE YOU HAPPY NOW?",
+    "won": "You Won."
   }
 }
