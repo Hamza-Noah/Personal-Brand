@@ -1,1 +1,85 @@
 @import "../../styles/variables";
+
+.error {
+  border: solid 10px $primary-color;
+  border-radius: 12px;
+  box-shadow: 25px 25px $primary-color;
+  position: relative;
+}
+
+.header {
+  background-color: $primary-color;
+  color: $white-text;
+  padding: 5px 5px 10px 10px;
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+
+.close,
+.minimize {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  width: 40px;
+  height: 100%;
+}
+
+.close {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fff2e8;
+    top: 10%;
+    right: 15px;
+    width: 1.4px;
+    height: 20px;
+    transition: all ease-in 0.2s;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &:hover::before {
+    transform: rotate(0deg);
+    background-color: $secondary-color;
+  }
+
+  &:hover::after {
+    transform: rotate(90deg);
+    background-color: $secondary-color;
+  }
+}
+
+.minimize::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: $white-text;
+  position: absolute;
+  top: 50%;
+}
+
+.body {
+  background-color: $secondary-color;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.floating-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
