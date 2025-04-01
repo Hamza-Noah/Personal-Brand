@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Tooltip } from "bootstrap"; 
 import error from "../../assets/image/error.png";
 import styles from "./error.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
@@ -16,6 +17,11 @@ const Error = () => {
     const container = containerRef.current;
     if (!img || !container) return;
 
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach((tooltipTriggerEl) => {
+      new Tooltip(tooltipTriggerEl);
+    });
+
     const animate = () => {
       const imgWidth = img.offsetWidth;
       const imgHeight = img.offsetHeight;
@@ -24,7 +30,6 @@ const Error = () => {
 
       let { x, y, dx, dy } = positionRef.current;
 
-      // Bounce off right or left edge
       if (x + imgWidth >= containerWidth) {
         x = containerWidth - imgWidth;
         dx = -dx;
@@ -33,7 +38,6 @@ const Error = () => {
         dx = -dx;
       }
 
-      // Bounce off bottom or top edge
       if (y + imgHeight >= containerHeight) {
         y = containerHeight - imgHeight;
         dy = -dy;
@@ -46,7 +50,6 @@ const Error = () => {
       y += dy;
 
       positionRef.current = { x, y, dx, dy };
-
       img.style.transform = `translate(${x}px, ${y}px)`;
 
       animationRef.current = requestAnimationFrame(animate);
@@ -70,11 +73,18 @@ const Error = () => {
       >
         <div className={`${styles.header} d-flex justify-content-between`}>
           <h3>
-            {t("error.error")}<span className="ps-3">&gt;/</span>
+            {t("error.error")}
+            <span className="ps-3">&gt;/</span>
           </h3>
           <div className="buttons">
-            <button type="button" className={styles.minimize}></button>
-            <button type="button" className={styles.close}></button>
+            <button
+              type="button"
+              className={styles.minimize}
+            ></button>
+            <button type="button"    data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-title="This top tooltip is themed via CSS variables."
+              data-bs-custom-class="custom-tooltip" className={styles.close}></button>
           </div>
         </div>
         <div className={styles.body} ref={containerRef}>

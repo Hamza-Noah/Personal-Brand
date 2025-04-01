@@ -1,10 +1,18 @@
+import { useEffect, useState } from "react";
+import { Tooltip } from "bootstrap";
 import styles from "./form.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
-import { useState } from "react";
 
 const Form = () => {
   const { t, currentLang } = useTranslationContext();
   const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach((tooltipTriggerEl) => {
+      new Tooltip(tooltipTriggerEl);
+    });
+  }, []);
 
   return (
     <>
@@ -19,8 +27,18 @@ const Form = () => {
             <span className="ps-3">&gt;/</span>
           </h3>
           <div className="buttons">
-            <button type="button" className={styles.minimize}></button>
-            <button type="button" className={styles.close}></button>
+            <button
+              type="button"
+              className={styles.minimize}
+            ></button>
+            <button
+              type="button"
+              className={styles.close}
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-title={t("form.closed")}
+              data-bs-custom-class="custom-tooltip"
+            ></button>
           </div>
         </div>
         <div className={`d-flex flex-wrap ${styles.inputs}`}>
@@ -40,7 +58,6 @@ const Form = () => {
           </div>
           <div className="form-group w-100">
             <textarea
-              name=""
               placeholder={t("form.messagePlaceholder")}
               className="w-100"
             ></textarea>
@@ -53,13 +70,13 @@ const Form = () => {
             <button
               className={`${styles.submit} ${
                 isHovered ? styles["hovered-submit"] : ""
-              } ${currentLang == "ar" ? styles.ar  : ""}`}
+              } ${currentLang == "ar" ? styles.ar : ""}`}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               {isHovered ? t("form.hoverSubmit") : t("form.submit")}
               {currentLang == "en" && !isHovered && (
-                <span className={`form-group ms-2 ps-1`}>$</span>
+                <span className="form-group ms-2 ps-1">$</span>
               )}
             </button>
           </div>
