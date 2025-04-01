@@ -65,6 +65,7 @@
 
 .icons {
   @media (max-width: 400px) {
+    height: 400px !important;
     & > div {
       transform: scale(0.7);
     }
@@ -82,7 +83,8 @@
       left: 150px !important;
     }
   }
-  @media (min-width: 424px) and (max-width: 425px) {
+  @media (min-width: 401px) and (max-width: 425px) {
+    
     & > div {
       transform: scale(0.7);
     }
@@ -97,10 +99,12 @@
       left: 145px !important;
     }
     & > div:nth-child(4) {
-      left: 165px !important;
+      left: 185px !important;
+      bottom: 70px !important;
     }
   }
-  @media (min-width: 474px) and (max-width: 475px) {
+  @media (min-width: 426px) and (max-width: 475px) {
+
     & > div {
       transform: scale(0.8);
     }
@@ -135,11 +139,16 @@
   @media (max-width: 767px) {
   }
 
-  @media (max-width: 991px) {
-    height: 500px !important;
+  @media (min-width: 768px) and (max-width: 991px) {
+    height: 400px !important;
     .dragged-icon:nth-child(4) {
       bottom: 170px;
     }
+  }
+
+  @media (max-width: 991px) {
+    height: 380px !important;
+    
   }
 }
 
