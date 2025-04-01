@@ -6,3 +6,26 @@
   background-color: $white-text;
   overflow-x: hidden;
 }
+
+:global(.tooltip){
+    color: white;             /* Text color */
+    border-radius: 5px;       /* Rounded corners */
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transition: opacity 0.3s;
+    border-radius: 0;
+    
+  }
+  :global(.tooltip-inner){
+    border-radius: 0;
+    z-index: 33;
+    background-color: #f63d64;
+    padding: 5px 15px;
+    color: $white-text;
+    font-weight: 600;
+    font-size: .75rem;
+    transform: translate(-70px, -10px);
+  font-family: "Space Mono";
+  }

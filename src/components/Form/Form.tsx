@@ -1,23 +1,48 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Tooltip } from "bootstrap";
 import styles from "./form.module.scss";
 import { useTranslationContext } from "../../contexts/TranslationContext";
 
 const Form = () => {
   const { t, currentLang } = useTranslationContext();
-  const [isHovered, setIsHovered] = useState(false);
+  const tooltipRef = useRef<Tooltip | null>(null);
+  const hideTimeoutRef = useRef<number | null>(null); // To store the timeout ID
 
   useEffect(() => {
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    tooltipTriggerList.forEach((tooltipTriggerEl) => {
-      new Tooltip(tooltipTriggerEl);
-    });
+    const tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]') as HTMLElement;
+
+    if (tooltipTriggerEl) {
+      tooltipRef.current = new Tooltip(tooltipTriggerEl, {
+        trigger: "manual",
+        placement: "top",
+      });
+    }
+
+    return () => {
+      // Clean up the timeout and tooltip instance when the component is unmounted
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
+      }
+    };
   }, []);
+
+  const handleCloseClick = () => {
+    if (!tooltipRef.current) return;
+
+    // Show the tooltip
+    tooltipRef.current.show();
+
+    // Hide after 5 seconds
+    if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current); // Clear any previous timeout
+    hideTimeoutRef.current = window.setTimeout(() => {
+      tooltipRef.current?.hide();
+    }, 5000);
+  };
 
   return (
     <>
       <form
-        className={` ${
+        className={`${
           currentLang == "en" ? styles["ltr-icon"] : styles["rtl-icon"]
         }`}
       >
@@ -38,6 +63,7 @@ const Form = () => {
               data-bs-placement="top"
               data-bs-title={t("form.closed")}
               data-bs-custom-class="custom-tooltip"
+              onClick={handleCloseClick} // Show tooltip on click
             ></button>
           </div>
         </div>
@@ -68,14 +94,10 @@ const Form = () => {
             }`}
           >
             <button
-              className={`${styles.submit} ${
-                isHovered ? styles["hovered-submit"] : ""
-              } ${currentLang == "ar" ? styles.ar : ""}`}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+              className={`${styles.submit} ${currentLang == "ar" ? styles.ar : ""}`}
             >
-              {isHovered ? t("form.hoverSubmit") : t("form.submit")}
-              {currentLang == "en" && !isHovered && (
+              {t("form.submit")}
+              {currentLang == "en" && (
                 <span className="form-group ms-2 ps-1">$</span>
               )}
             </button>
