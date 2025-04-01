@@ -72,13 +72,15 @@
     "emailPlaceholder": "الايميل",
     "messagePlaceholder": "الرسالة",
     "submit": "إرسال",
-    "hoverSubmit": "إرسال"
+    "hoverSubmit": "إرسال",
+    "closed": "This Window cannot be closed"
   },
   "error": {
     "error": "مشكلة",
     "close": "الرجاء عدم إغلاق النافذة",
     "seriously": "SEARIOUSLY?",
     "happy": "ARE YOU HAPPY NOW?",
-    "won": "You Won."
+    "won": "You Won.",
+    "closed": "This Window cannot be closed"
   }
 }

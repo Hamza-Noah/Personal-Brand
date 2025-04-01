@@ -69,13 +69,15 @@
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Message",
     "submit": "TAKE MY",
-    "hoverSubmit": "SEND"
+    "hoverSubmit": "SEND",
+    "closed": "This Window cannot be closed"
   },
   "error": {
     "error": "ERROR",
     "close": "Do Not Close This.",
     "seriously": "SEARIOUSLY?",
     "happy": "ARE YOU HAPPY NOW?",
-    "won": "You Won."
+    "won": "You Won.",
+    "closed": "This Window cannot be closed"
   }
 }
