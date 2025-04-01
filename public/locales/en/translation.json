@@ -70,7 +70,7 @@
     "messagePlaceholder": "Message",
     "submit": "TAKE MY",
     "hoverSubmit": "SEND",
-    "closed": "Window can't be closed"
+    "closed": "Window Can't Be Closed"
   },
   "error": {
     "error": "ERROR",
@@ -78,6 +78,6 @@
     "seriously": "SEARIOUSLY?",
     "happy": "ARE YOU HAPPY NOW?",
     "won": "You Won.",
-    "closed": "Window can't be closed"
+    "closed": "Window Can't Be Closed"
   }
 }
